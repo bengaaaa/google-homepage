@@ -7,12 +7,15 @@
     <title>Document</title>
     <style>
       body {
-        background-color: rbg(34, 34, 34);
+        background-color: #fff;
+        height: 100vh;
+        margin: 0;
       }
       .wrapper {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        align-content: space-between;
       }
       .page-main {
         display: flex;
@@ -20,16 +23,44 @@
         flex-grow: 1;
         justify-content: center;
         align-items: center;
+        padding-bottom: 80px;
+      }
+      .page-footer {
       }
       header ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
       }
+      header {
+        width: auto;
+        height: auto;
+      }
+      footer {
+        background-color: gray;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+      }
+      footer ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: gray;
+      }
       li {
         float: left;
       }
       header ul li a {
+        display: block;
+        padding: 8px;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+      }
+      footer ul li a {
         display: block;
         padding: 8px;
         font-size: 16px;
@@ -78,7 +109,23 @@
         </form>
       </main>
       <footer class="page-footer">
-        <!-- footer goes here -->
+        <ul class="nav-bar">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Store</a></li>
+
+          <li class="header-right">
+            <a href="#">sign-in-button</a>
+          </li>
+          <li class="header-right">
+            <a href="#">apps-logo</a>
+          </li>
+          <li class="header-right">
+            <a href="#">Images</a>
+          </li>
+          <li class="header-right">
+            <a href="#">Gmail</a>
+          </li>
+        </ul>
       </footer>
     </div>
   </body>
