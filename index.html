@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
       body {
-        background-color: whitesmoke;
+        background-color: rbg(34, 34, 34);
       }
       .wrapper {
         display: flex;
@@ -16,16 +16,55 @@
       }
       .page-main {
         display: flex;
+        flex-direction: column;
         flex-grow: 1;
         justify-content: center;
         align-items: center;
+      }
+      header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        float: left;
+      }
+      header ul li a {
+        display: block;
+        padding: 8px;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+      }
+      header ul li a:hover {
+        text-decoration: underline;
+      }
+      .header-right {
+        float: right;
       }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <header class="page-header">
-        <!-- header goes here -->
+        <ul class="nav-bar">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Store</a></li>
+
+          <li class="header-right">
+            <a href="#">sign-in-button</a>
+          </li>
+          <li class="header-right">
+            <a href="#">apps-logo</a>
+          </li>
+          <li class="header-right">
+            <a href="#">Images</a>
+          </li>
+          <li class="header-right">
+            <a href="#">Gmail</a>
+          </li>
+        </ul>
       </header>
       <main class="page-main">
         <img
@@ -33,6 +72,10 @@
           src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
           alt="Google"
         />
+        <form>
+          <label for="search-text">Search:</label>
+          <input type="text" id="search-text" name="search-text" />
+        </form>
       </main>
       <footer class="page-footer">
         <!-- footer goes here -->
