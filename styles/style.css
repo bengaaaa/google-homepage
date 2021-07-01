@@ -131,3 +131,7 @@ footer ul li a:hover {
   border-color: #c6c6c6;
   color: black;
 }
+#headshot:hover {
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 100%) !important;
+  border-color: rgba(223, 225, 229, 0) !important;
+}
