@@ -50,6 +50,31 @@
         border-width: 1px;
         border-color: #5f636820;
       }
+      form {
+        display: flex;
+        flex-direction: row;
+        height: 44px;
+        border-width: 1px;
+        border-color: #dfe1e5;
+        border-style: solid;
+        margin: 20px;
+        border-radius: 24px;
+        width: 482px;
+      }
+      form:hover {
+        box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+        border-color: rgba(223, 225, 229, 0);
+      }
+      input:focus {
+        outline: none;
+      }
+      input[type="text"] {
+        font-size: 16px;
+      }
+      input {
+        border-style: none;
+        flex-grow: 1;
+      }
       footer ul {
         list-style-type: none;
         margin: 0;
@@ -74,6 +99,12 @@
         font-size: 14px;
         text-decoration: none;
       }
+      .search {
+        width: 20px;
+        height: 20px;
+        padding: 12px 12px 12px 15px;
+        filter: opacity(50%);
+      }
       header ul li a:hover {
         text-decoration: underline;
         color: rgba(0, 0, 0, 0.7) !important;
@@ -86,6 +117,26 @@
       }
       .header-right {
         float: right;
+      }
+      #mic {
+        height: 24px;
+        width: auto;
+        padding: 10px 15px 10px 10px;
+      }
+      .buttons button {
+        padding: 8px 12px 8px 12px;
+        margin: 10px;
+        border-color: #f2f2f2;
+        background-color: #f2f2f2;
+        color: #5f6368;
+        box-shadow: none;
+        text-shadow: none;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+      }
+      .buttons button:hover {
+        border-color: #c6c6c6;
       }
     </style>
   </head>
@@ -135,15 +186,18 @@
         </ul>
       </header>
       <main class="page-main">
-        <img
-          class="logo"
-          src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-          alt="Google"
-        />
-        <form>
-          <label for="search-text">Search:</label>
-          <input type="text" id="search-text" name="search-text" />
-        </form>
+        <img class="logo" src="images/google.png" alt="Google" />
+        <div class="search-bar">
+          <form>
+            <img class="search" src="images/search.png" />
+            <input type="text" id="search-text" name="search-text" />
+            <img id="mic" src="images/mic.png" />
+          </form>
+        </div>
+        <div class="buttons">
+          <button type="button">Google Search</button>
+          <button type="button">I'm Feeling Lucky</button>
+        </div>
       </main>
       <footer class="page-footer">
         <ul class="nav-bar">
